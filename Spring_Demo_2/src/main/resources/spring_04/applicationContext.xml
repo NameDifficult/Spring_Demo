@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <!--
+        引用类型自动注入
+            id：要和实体类属性名相同
+    -->
+    <bean id="student" class="springs.spring_04.Student" autowire="byName">
+       <property name="name" value="李四"></property>
+       <property name="age" value="29"></property>
+<!--       <property name="school" ref="school"></property> 自动注入不需要写-->
+    </bean>
+<!--    <bean id="school" class="springs.spring_04.School">-->
+<!--        <property name="name" value="清华大学"></property>-->
+<!--        <property name="address" value="北京"></property>-->
+<!--    </bean>-->
+
+
+
+
+    <!--
+        根据类型自动注入：byType
+        byType时同一个实体类的话不能有多个bean。所以上面那个要注释
+        同源关系：
+        1. java中引用类型的数据类型和bean的class值是一样的
+        2. java中引用类型的数据类型和bean的class值是父子类关系
+        3. java中引用类型的数据类型和bean的class值是接口和实现类关系
+    -->
+    <bean id="student2" class="springs.spring_04.Student" autowire="byType">
+        <property name="name" value="李四"></property>
+        <property name="age" value="29"></property>
+    </bean>
+    <bean id="school2" class="springs.spring_04.School">
+        <property name="name" value="北京大学"></property>
+        <property name="address" value="北京"></property>
+    </bean>
+
+</beans>

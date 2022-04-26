@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- 总文件，包含其他多个配置文件 ，一般不声明bean -->
+<!--    <import resource="classpath:spring_05/spring_school.xml"/>-->
+<!--    <import resource="classpath:spring_05/spring_student.xml"/>-->
+
+
+    <!-- 可使用通配符-->
+    <import resource="classpath:spring_05/spring_*"/>
+
+</beans>

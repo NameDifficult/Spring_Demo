@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--
+        DI：给属性赋值
+        1. set注入 调用类的set方法
+            方式一：<property name="age" value="12"></property>
+            方式二：
+    -->
+    <bean id="student" class="springs.spring_01.Student">
+        <property name="age" value="12"></property>
+        <property name="name" value="李四"></property>
+    </bean>
+
+</beans>
